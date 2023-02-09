@@ -35,6 +35,17 @@ for school in schools:  # "school" represents the dictionary
     if school["NCAA"]["NAIA conference number football (IC2020)"] in conference_schools:
         if school["Graduation rate  women (DRVGR2020)"] > 80:
             print(school["instnm"])
-            print(school["Graduation rate  women (DRVGR2020)"])
             print()
             print()
+
+
+for school in schools:
+    if school["NCAA"]["NAIA conference number football (IC2020)"] in conference_schools:
+        price = school[
+            "Total price for in-state students living off campus (not with family)  2020-21 (DRVIC2020)"
+        ]
+        if price:
+            if price > 50000:
+                print(school["instnm"])
+                print()
+                print()
